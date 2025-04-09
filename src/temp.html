@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Creator Connect</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      .card-container {
+        position: relative;
+        width: 300px;
+        height: 300px;
+        margin: auto;
+      }
+      .rotating-cards {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        animation: rotate 12s linear infinite;
+      }
+      .rotating-cards img {
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        border-radius: 16px;
+        object-fit: cover;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      }
+      .rotating-cards img:nth-child(1) {
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+      .rotating-cards img:nth-child(2) {
+        top: 50%;
+        right: 0;
+        transform: translateY(-50%);
+      }
+      .rotating-cards img:nth-child(3) {
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+      .rotating-cards img:nth-child(4) {
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+      }
+
+      @keyframes rotate {
+        from {
+          transform: rotate(0deg);
+        }
+        to {
+          transform: rotate(360deg);
+        }
+      }
+    </style>
+  </head>
+  <body class="bg-gray-100 text-gray-900 font-sans">
+    <!-- Header -->
+    <header
+      class="flex justify-between items-center px-8 py-4 border-b bg-white shadow-sm"
+    >
+      <div class="text-2xl font-bold text-indigo-700">Creator Connect</div>
+      <nav class="flex gap-6 text-sm font-medium">
+        <a href="#" class="hover:text-indigo-700">About</a>
+        <a href="#" class="hover:text-indigo-700">Solutions</a>
+        <a href="#" class="hover:text-indigo-700">Projects</a>
+        <a href="#" class="hover:text-indigo-700">Insights</a>
+        <a href="#" class="hover:text-indigo-700">Careers</a>
+        <a href="#" class="hover:text-indigo-700">Resources</a>
+        <span class="border-l pl-4 text-gray-500">Sign In</span>
+        <button
+          class="bg-indigo-700 text-white px-4 py-2 rounded hover:bg-indigo-800"
+        >
+          Contact Us
+        </button>
+      </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section
+      class="flex flex-col items-center text-center px-4 py-16 max-w-5xl mx-auto"
+    >
+      <h1 class="text-4xl md:text-5xl font-extrabold leading-tight">
+        UNLOCK CREATIVE POTENTIAL<br />
+        THROUGH AUTHENTIC CONNECTIONS
+      </h1>
+      <p class="mt-6 text-lg max-w-2xl text-gray-700">
+        Join the network that fuels modern marketing through meaningful
+        relationships between storytellers and brands.
+      </p>
+      <div class="mt-8 flex gap-4">
+        <button
+          class="bg-indigo-700 text-white px-6 py-2 rounded hover:bg-indigo-800"
+        >
+          For Brands
+        </button>
+        <button
+          class="border px-6 py-2 rounded hover:border-indigo-700 hover:text-indigo-700"
+        >
+          For Creators
+        </button>
+      </div>
+
+      <!-- Rotating Cards -->
+      <div class="card-container mt-16">
+        <div class="rotating-cards">
+          <img
+            src="https://media.istockphoto.com/id/1420115434/photo/beautiful-woman-vlogging-at-home.jpg?s=612x612&w=0&k=20&c=VPpqcBZ_js3ZQQmVC9B2aq9oPlCuSVx6zsWp8qD7Bsg="
+            alt="Influencer"
+          />
+          <img
+            src="https://media.istockphoto.com/id/1313649311/photo/smiling-young-african-female-influencer-doing-a-vlog-post-at-home.jpg?s=612x612&w=0&k=20&c=3FU3t-qnfyNH5Di7poS7goCYDhTITJZaNDe4CrNHtHk="
+            alt="Fashion"
+          />
+          <img
+            src="https://www.hubspot.com/hubfs/Untitled%20design%20%2849%29.jpg"
+            alt="Lifestyle"
+          />
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSL8LPHx4LBSPNy8coJ6x6WZMGalHgdc90HWaWtWAVmFWS01U25I__69RU7l4AE0dJbrEo&usqp=CAU"
+            alt="Tech"
+          />
+        </div>
+      </div>
+
+      <!-- Partners -->
+      <div class="mt-12 text-sm font-semibold text-gray-600">OUR PARTNERS</div>
+      <div
+        class="mt-4 flex flex-wrap justify-center gap-6 text-2xl text-gray-500"
+      >
+        <span>Instagram</span>
+        <span>TikTok</span>
+        <span>YouTube</span>
+        <span>Twitch</span>
+        <span>Snapchat</span>
+        <span>Pinterest</span>
+      </div>
+    </section>
+
+    <!-- Clients -->
+    <section class="py-12 border-t bg-white">
+      <h2 class="text-center text-indigo-700 text-xs font-bold tracking-wider">
+        TRUSTED BY
+      </h2>
+      <div
+        class="mt-6 flex flex-wrap justify-center gap-8 text-gray-700 text-xl"
+      >
+        <span>Nike</span>
+        <span>Adobe</span>
+        <span>Spotify</span>
+        <span>Red Bull</span>
+        <span>VISA</span>
+        <span>Philips</span>
+        <span>Amazon</span>
+      </div>
+    </section>
+
+    <!-- Extra Content -->
+    <section class="py-16 bg-indigo-50">
+      <div class="max-w-5xl mx-auto text-center">
+        <h2 class="text-3xl font-bold text-indigo-700">Why Choose Us?</h2>
+        <p class="mt-4 text-gray-700">
+          We blend data-driven strategies with the creativity of top-tier
+          influencers to deliver measurable success across all platforms.
+        </p>
+        <div class="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div class="bg-white p-6 rounded shadow">
+            <img
+              class="h-40 w-full object-cover rounded mb-4"
+              src="https://www.smartinsights.com/wp-content/uploads/2020/06/hero-sales-original-copy.png"
+              alt="Data Insight"
+            />
+            <h3 class="font-semibold text-lg">Smart Insights</h3>
+            <p class="text-sm text-gray-600 mt-2">
+              Gain deep campaign performance analysis and audience engagement
+              data.
+            </p>
+          </div>
+          <div class="bg-white p-6 rounded shadow">
+            <img
+              class="h-40 w-full object-cover rounded mb-4"
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9mCijoxw_NtqMcEJqAgMaWTcR2udLXVSvcA&s"
+              alt="Collaboration"
+            />
+            <h3 class="font-semibold text-lg">Collaborative Network</h3>
+            <p class="text-sm text-gray-600 mt-2">
+              Partner with leading creators who match your brand's unique voice.
+            </p>
+          </div>
+          <div class="bg-white p-6 rounded shadow">
+            <img
+              class="h-40 w-full object-cover rounded mb-4"
+              src="https://www.shutterstock.com/image-photo/analysis-finance-grow-graph-market-600nw-2478761707.jpg"
+              alt="Growth"
+            />
+            <h3 class="font-semibold text-lg">Scalable Growth</h3>
+            <p class="text-sm text-gray-600 mt-2">
+              Drive real business results through scalable, influencer-powered
+              campaigns.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
