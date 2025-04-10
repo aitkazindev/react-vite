@@ -12,6 +12,12 @@
   opacity: 0.8;
 }
 
+.button:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+  background-color: #ccc; /* или другой "неактивный" цвет */
+  color: #666; /* если нужно */
+}
 .button.active {
   background: #3e6ae1;
   color: #fff;

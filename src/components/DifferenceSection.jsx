@@ -12,19 +12,19 @@ export default function DifferenceSection() {
       <h3>What makes us different</h3>
       <Button
         isActive={contentType === "way"}
-        onUserClicked={() => handleClick("way")}
+        onClick={() => handleClick("way")}
       >
         Way
       </Button>
       <Button
         isActive={contentType === "easy"}
-        onUserClicked={() => handleClick("easy")}
+        onClick={() => handleClick("easy")}
       >
         Easy
       </Button>
       <Button
         isActive={contentType === "program"}
-        onUserClicked={() => handleClick("program")}
+        onClick={() => handleClick("program")}
       >
         Home
       </Button>

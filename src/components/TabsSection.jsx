@@ -2,18 +2,19 @@ import Button from "./Button/Button";
 
 export default function TabsSection({ active, onChange }) {
   return (
-    <section>
-      <Button
-        isActive={active === "main"}
-        onUserClicked={() => onChange("main")}
-      >
+    <section style={{ marginBottom: "1rem" }}>
+      <Button isActive={active === "main"} onClick={() => onChange("main")}>
         Main
       </Button>
       <Button
         isActive={active === "feedback"}
-        onUserClicked={() => onChange("feedback")}
+        onClick={() => onChange("feedback")}
       >
         CallBack
+      </Button>
+
+      <Button isActive={active === "effect"} onClick={() => onChange("effect")}>
+        Effect
       </Button>
     </section>
   );
