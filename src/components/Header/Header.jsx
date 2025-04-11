@@ -1,5 +1,5 @@
 import logo from "/vite.svg";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { styled } from "styled-components";
 import "./Header.css";
 
@@ -14,7 +14,16 @@ const HeaderContainer = styled.header`
 `;
 export default function Header() {
   const [currentTime, setCurrentTime] = useState(new Date());
-  setInterval(() => setCurrentTime(new Date()), 1000);
+
+  useEffect(() => {
+    const interval = setInterval(() => setCurrentTime(new Date()), 1000);
+
+    return () => {
+      clearInterval(interval);
+      console.log("cleaning...");
+    };
+  }, []);
+
   return (
     <HeaderContainer>
       <h3>Result University</h3>

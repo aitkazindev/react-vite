@@ -9,12 +9,17 @@ import FeedbackSection from "./components/FeedbackSection";
 
 const App = () => {
   const [tab, setTab] = useState("effect");
+  const [visible, setVisible] = useState(true);
+
+  // setTimeout(() => {
+  //   setVisible(false);
+  // }, 3000);
   function handleSelection(current) {
     setTab(current);
   }
   return (
     <>
-      <Header />
+      {visible && <Header />}
       <main>
         <IntroSection />
         <TabsSection active={tab} onChange={handleSelection} />
